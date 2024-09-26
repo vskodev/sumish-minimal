@@ -1,0 +1,19 @@
+{
+  "name": "sumish/minimal",
+  "description": "Sumish application minimal template",
+  "keywords": ["microframework"],
+  "homepage": "http://sumish.xyz",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vitalii Skorobahatko",
+      "email": "vsko@email.ua"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "sumish/framework": "dev-master",
+    "twig/twig": "^1.33"
+  }
+}
