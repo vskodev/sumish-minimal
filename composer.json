@@ -16,5 +16,5 @@
     "sumish/framework": "dev-master",
     "twig/twig": "^1.33"
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "dev"
 }
