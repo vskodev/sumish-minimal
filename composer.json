@@ -12,8 +12,31 @@
     }
   ],
   "require": {
-    "sumish/framework": "1.0.0",
-    "twig/twig": "^1.33"
+    "sumish/framework": "^2.0.0",
+    "twig/twig": "^3.17.1"
   },
-  "minimum-stability": "dev"
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/vskodev/sumish-minimal.git"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+        "App\\": "app/"
+    }
+  },
+  "scripts": {
+    "controller:create": "Sumish\\Generator::createController",
+    "model:create": "Sumish\\Generator::createModel",
+    "view:create": "Sumish\\Generator::createView",
+    "migrate:create": "Sumish\\Generator::createMigration",
+    "migrate:apply": "Sumish\\Generator::applyMigration",
+    "migrate:rollback": "Sumish\\Generator::rollbackMigration",
+    "migrate:status": "Sumish\\Generator::showMigrationStatus",
+    "post-create-project-cmd": [
+      "php vendor/bin/composer controller:create Main"
+    ]
+  },
+  "prefer-stable": true
 }

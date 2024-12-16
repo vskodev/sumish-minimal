@@ -1,7 +1,18 @@
 <?php
 
-require "vendor/autoload.php";
+/**
+ * Sumish Framework (https://sumish.xyz)
+ *
+ * @license https://sumish.mit-license.org (MIT License)
+ */
 
-$config = require "config/web.php";
+declare(strict_types=1);
 
-(new Sumish\Application($config))->run();
+$composerAutoloader = __DIR__ . '/vendor/autoload.php';
+if (file_exists($composerAutoloader)) {
+    require $composerAutoloader;
+} else {
+    echo 'composer install';
+}
+
+(new Sumish\Application([]))->run();
