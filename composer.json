@@ -35,7 +35,7 @@
     "migrate:rollback": "Sumish\\Generator::rollbackMigration",
     "migrate:status": "Sumish\\Generator::showMigrationStatus",
     "post-create-project-cmd": [
-      "php vendor/bin/composer controller:create Main"
+      "@composer controller:create Main"
     ]
   },
   "prefer-stable": true
